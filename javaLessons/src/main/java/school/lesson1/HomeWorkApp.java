@@ -18,6 +18,7 @@ public class HomeWorkApp {
         int a = 5;
         int b = 7;
         int sum = a + b;
+
         if (sum >= 0) {
             System.out.println("Сумма положительная");
         } else {
@@ -27,6 +28,7 @@ public class HomeWorkApp {
 
     public static void printColor() {
         int value = 55;
+
         if (value <= 0) {
             System.out.println("Красный");
         } else if (value > 0 && value <= 100) {
@@ -39,6 +41,7 @@ public class HomeWorkApp {
     public static void compareNumbers() {
         int a = 15;
         int b = 17;
+
         if (a >= b) {
             System.out.println("a >= b");
         } else {
