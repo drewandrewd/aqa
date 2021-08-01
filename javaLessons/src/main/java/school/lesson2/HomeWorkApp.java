@@ -54,6 +54,7 @@ public class HomeWorkApp {
             if (curr < min)
                 min = curr;
         }
+
     }
 
     public static boolean sumNum(int a, int b) { //1
@@ -135,5 +136,35 @@ public class HomeWorkApp {
             }
         }
         return result;
+    }
+
+    public static void moveArr(int[] arr, int n) { //***
+        int length = arr.length;
+
+        if (n != 0) {
+            if (n > length) {
+                n = n % length;
+            }
+            if (n > 0) {
+                for (int i = 0; i < n; i++) {
+                    int memory = arr[0];
+                    arr[0] = arr[length - 1];
+                    for (int j = 1; j < length - 1; j++) {
+                        arr[length - j] = arr[length - j - 1];
+                    }
+                    arr[1] = memory;
+                }
+            } else if (n < 0) {
+                for (int i = 0; i > n ; i--) {
+                    int memory = arr[length - 1];
+                    arr[length - 1] = arr[0];
+                    for (int j = 1; j < length; j++) {
+                        arr[j - 1] = arr[j];
+                    }
+                    arr[length - 2] = memory;
+                }
+            }
+        }
+
     }
 }
