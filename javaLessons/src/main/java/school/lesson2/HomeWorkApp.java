@@ -6,10 +6,8 @@ public class HomeWorkApp {
 
     public static void main(String[] args) {
         int[] arrOne = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0}; //6
-
         for (int i = 0; i < arrOne.length; i++) {
             int curr = arrOne[i];
-
             if (curr == 0) {
                 curr = 1;
             } else if (curr == 1) {
@@ -18,23 +16,19 @@ public class HomeWorkApp {
         }
 
         int[] arrTwo = new int[100]; //7
-
         for (int i = 0; i < arrTwo.length; i++) {
             arrTwo[i] = i + 1;
         }
 
         int[] arrThree = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1}; //8
-
         for (int i = 0; i < arrThree.length; i++) {
             int curr = arrThree[i];
-
             if (curr < 6) {
                 curr *= 2;
             }
         }
 
         int[][] arrFour = new int[9][9]; //9
-
         for (int i = 0; i < arrFour.length; i++) {
             for (int j = 0; j < arrFour[i].length; j++) {
                 if (i == j || j == arrFour.length - 1 - i) {
@@ -46,7 +40,6 @@ public class HomeWorkApp {
         int[] arrFive = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1}; //10*
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-
         for (int i = 0; i < arrFive.length; i++) {
             int curr = arrFive[i];
             if (curr > max)
@@ -54,12 +47,10 @@ public class HomeWorkApp {
             if (curr < min)
                 min = curr;
         }
-
     }
 
     public static boolean sumNum(int a, int b) { //1
         int sum = a + b;
-
         if (sum >= 10 && sum <= 20) {
             return true;
         } else {
@@ -103,7 +94,6 @@ public class HomeWorkApp {
 
     public static int[] Array(int len, int initialValue) { //10
         int[] array = new int[len];
-
         for (int i = 0; i < array.length; i++) {
             array[i] = initialValue;
         }
@@ -116,21 +106,17 @@ public class HomeWorkApp {
         int left = arr[0];
         int right = arr[arr.length - 1];
         boolean result = false;
-
         for (int i = 1; i < arr.length; i++) {
             left += arr[i];
             sumLeft[i - 1] = left;
         }
-
         for (int i = arr.length - 2; i >= 0; i--) {
             right += arr[i];
             sumRight[i] = right;
         }
-
         for (int i = 0; i < sumLeft.length - 2; i++) {
             int currLeft = sumLeft[i];
             int currRight = sumRight[i + 2];
-
             if (currLeft == currRight) {
                 result = true;
             }
@@ -140,7 +126,6 @@ public class HomeWorkApp {
 
     public static void moveArr(int[] arr, int n) { //***
         int length = arr.length;
-
         if (n != 0) {
             if (n > length) {
                 n = n % length;
