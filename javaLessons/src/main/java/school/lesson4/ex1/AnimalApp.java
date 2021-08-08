@@ -1,4 +1,4 @@
-package school.lesson4;
+package school.lesson4.ex1;
 
 public class AnimalApp {
     public static void main(String[] args) {
