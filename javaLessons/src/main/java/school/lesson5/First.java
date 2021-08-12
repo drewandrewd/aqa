@@ -1,6 +1,6 @@
 package school.lesson5;
 
-public class First<T> {
+public class First<T> { // Задание 1
 
     private T[] nums;
 
