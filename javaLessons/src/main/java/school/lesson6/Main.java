@@ -3,7 +3,7 @@ package school.lesson6;
 public class Main {
 
     public static int sumElements(String[][] array) throws MyArraySizeException, MyArrayDataException {
-        if (array.length != 4 || array[0].length !=4  || array[1].length !=4 || array[2].length !=4 || array[3].length !=4) {
+        if (array.length != 4 || checkArray(array)) {
             throw new MyArraySizeException("Массив другого размера.", array);
         }
         int result = 0;
@@ -14,6 +14,17 @@ public class Main {
                 }
                 int curr = Integer.parseInt(array[i][j]);
                 result += curr;
+            }
+        }
+        return result;
+    }
+
+    public static boolean checkArray(String[][] array) {
+        boolean result = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].length != 4) {
+                result = true;
+                break;
             }
         }
         return result;
