@@ -51,9 +51,11 @@ public class AppData {
         while (scanner.hasNextLine()) {
             System.out.println(scanner.nextLine());
         }
+        scanner.close();
     }
 
-    public void save(AppData data) {
-
+    public void save(File file) throws IOException {
+        new FileWriter(file, false).close();
+        outputData(file);
     }
 }

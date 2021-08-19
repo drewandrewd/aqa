@@ -11,6 +11,8 @@ public class AppMain {
             AppData data = new AppData(new String[]{"Value 1", "Value 2", "Value 3"}, new int[][]{{100, 200, 123}, {300, 400, 500}});
             data.outputData(file);
             data.inputData(file);
+            AppData newData = new AppData(new String[]{"Value 1", "Value 2"}, new int[][]{{100, 200, 123, 522}, {300}});
+            newData.save(file);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
