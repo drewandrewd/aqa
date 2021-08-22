@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SecondApp {
+
     private Map<String, String> book;
 
     public SecondApp(Map<String, String> book) {
